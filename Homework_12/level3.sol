@@ -19,7 +19,7 @@ contract level3 {
         assembly {
             a := mload(add(packed, 0x20))
             b := mload(add(packed, 0x22))
-            c := mload(add(packed, 0x23))
+            c := mload(add(packed, 0x24))
         }
     }
 }
