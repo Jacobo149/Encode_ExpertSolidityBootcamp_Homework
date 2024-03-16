@@ -1,6 +1,5 @@
 
 // Level 1 - Matrix Addition
-pragma solidity 0.8.19;
 
 /*
 Write a function that adds two matrices returns the result.
@@ -18,3 +17,23 @@ interface Isolution1 {
 }
 
 */
+
+pragma solidity 0.8.19;
+
+contract level1 {
+
+    function solution(
+        uint256[2][3] calldata x, 
+        uint256[2][3] calldata y
+    ) external pure returns (
+        uint256[2][3] memory
+    ) {
+        uint256[2][3] memory result;
+        for (uint i = 0; i < 2; i++) {
+            for (uint j = 0; j < 3; j++) {
+                result[i][j] = x[i][j] + y[i][j];
+            }
+        }
+        return result;
+    }
+}
